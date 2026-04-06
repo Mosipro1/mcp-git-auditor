@@ -1,0 +1,14 @@
+MCP Git Auditor
+Copyright 2026 Mosiah
+
+Developed in Bolivia
+
+This product includes software developed for automated auditing of Git
+repositories against software engineering standards.
+
+This project is licensed under the Apache License, Version 2.0.
+
+Third-party dependencies:
+- @modelcontextprotocol/sdk - Apache License 2.0
+- simple-git - MIT License
+- fast-glob - MIT License
