@@ -8,6 +8,13 @@
 
 An MCP (Model Context Protocol) server that audits Git repositories against software engineering standards and quality practices. Built in TypeScript for Node.js.
 
+```bash
+# Install globally
+npm install -g mcp-git-auditor
+
+# Configure in Claude Desktop and start auditing!
+```
+
 ## Overview
 
 MCP Git Auditor performs automated audits of Git repositories, evaluating:
@@ -25,12 +32,14 @@ MCP Git Auditor performs automated audits of Git repositories, evaluating:
 - [Installation](#installation)
 - [MCP Configuration](#mcp-configuration)
 - [Example Usage](#example-usage)
+- [Supported Standards](#supported-standards)
 - [Project Structure](#project-structure)
 - [Scoring Weights](#scoring-weights)
 - [Standards Evaluated](#standards-evaluated)
 - [Security Checks](#security-checks)
 - [Development](#development)
 - [Contributing](#contributing)
+- [Roadmap](#roadmap)
 - [License](#license)
 
 ## Features
@@ -56,21 +65,42 @@ MCP Git Auditor performs automated audits of Git repositories, evaluating:
 
 ## Quick Start
 
-### Global Installation (Recommended)
+### One-Line Install
 
 ```bash
 npm install -g mcp-git-auditor
-mcp-git-auditor
 ```
 
-### From Source
+### MCP Configuration (Claude Desktop)
+
+Add to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "git-auditor": {
+      "command": "npx",
+      "args": ["-y", "mcp-git-auditor"]
+    }
+  }
+}
+```
+
+### Usage
+
+Once configured, ask Claude:
+- "Audit this repository"
+- "Check code quality of /path/to/repo"
+- "Analyze testing practices in this project"
+
+### Alternative: Run Standalone
 
 ```bash
-git clone https://github.com/Mosipro1/mcp-git-auditor.git
-cd mcp-git-auditor
-npm install
-npm run build
-npm start
+# Using npx (no install required)
+npx mcp-git-auditor
+
+# Or if installed globally
+mcp-git-auditor
 ```
 
 ## Installation
