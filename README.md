@@ -1,5 +1,11 @@
 # MCP Git Auditor
 
+[![npm version](https://img.shields.io/npm/v/mcp-git-auditor.svg)](https://www.npmjs.com/package/mcp-git-auditor)
+[![License](https://img.shields.io/npm/l/mcp-git-auditor.svg)](https://github.com/Mosipro1/mcp-git-auditor/blob/main/LICENSE)
+[![Build Status](https://github.com/Mosipro1/mcp-git-auditor/actions/workflows/ci.yml/badge.svg)](https://github.com/Mosipro1/mcp-git-auditor/actions)
+[![Downloads](https://img.shields.io/npm/dm/mcp-git-auditor.svg)](https://www.npmjs.com/package/mcp-git-auditor)
+[![GitHub stars](https://img.shields.io/github/stars/Mosipro1/mcp-git-auditor.svg)](https://github.com/Mosipro1/mcp-git-auditor/stargazers)
+
 An MCP (Model Context Protocol) server that audits Git repositories against software engineering standards and quality practices. Built in TypeScript for Node.js.
 
 ## Overview
@@ -12,6 +18,21 @@ MCP Git Auditor performs automated audits of Git repositories, evaluating:
 - **Security Issues**: Detects hardcoded secrets, exposed credentials, unsafe code patterns
 - **Software Engineering Standards**: Evaluates compliance with IEEE 829, IEEE 830, ISO/IEC 25010, ISO/IEC 12207
 
+## Table of Contents
+
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+- [MCP Configuration](#mcp-configuration)
+- [Example Usage](#example-usage)
+- [Project Structure](#project-structure)
+- [Scoring Weights](#scoring-weights)
+- [Standards Evaluated](#standards-evaluated)
+- [Security Checks](#security-checks)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - **Repository Scanning**: Recursively scans directories, ignoring common build artifacts
@@ -22,6 +43,36 @@ MCP Git Auditor performs automated audits of Git repositories, evaluating:
 - **Standards Evaluation**: Evaluates compliance with IEEE 829, IEEE 830, ISO/IEC 25010, ISO/IEC 12207
 - **Git Analysis**: Analyzes commit history, commit message quality, branch patterns
 
+## Why MCP Git Auditor?
+
+| Feature | MCP Git Auditor | SonarQube | CodeClimate | Semgrep |
+|---------|-----------------|-----------|-------------|---------|
+| MCP Server Integration | ✅ | ❌ | ❌ | ❌ |
+| IEEE/ISO Standards | ✅ | Partial | ❌ | ❌ |
+| Architecture Detection | ✅ | ❌ | ❌ | ❌ |
+| Git Hygiene Analysis | ✅ | ❌ | ❌ | ❌ |
+| Free & Open Source | ✅ | Limited | Limited | ✅ |
+| No External Dependencies | ✅ | ❌ | ❌ | ❌ |
+
+## Quick Start
+
+### Global Installation (Recommended)
+
+```bash
+npm install -g mcp-git-auditor
+mcp-git-auditor
+```
+
+### From Source
+
+```bash
+git clone https://github.com/Mosipro1/mcp-git-auditor.git
+cd mcp-git-auditor
+npm install
+npm run build
+npm start
+```
+
 ## Installation
 
 ### Prerequisites
@@ -29,11 +80,17 @@ MCP Git Auditor performs automated audits of Git repositories, evaluating:
 - Node.js 18+
 - Git 2.30+
 
-### Steps
+### Global Install
+
+```bash
+npm install -g mcp-git-auditor
+```
+
+### Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/mosiah/mcp-git-auditor.git
+git clone https://github.com/Mosipro1/mcp-git-auditor.git
 cd mcp-git-auditor
 
 # Install dependencies
@@ -339,6 +396,25 @@ Look for issues labeled `good first issue` to get started:
 - Add support for additional test frameworks
 - Improve architecture detection heuristics
 - Add additional ISO/IEEE rules
+
+## Roadmap
+
+### v1.1.0 (Next)
+- [ ] SARIF output format support
+- [ ] GitHub Actions integration
+- [ ] CI/CD pipeline templates
+
+### v1.2.0
+- [ ] Support for Python projects
+- [ ] Support for Java/Kotlin projects
+- [ ] Support for Go projects
+
+### v2.0.0
+- [ ] Web dashboard for visualizing audit results
+- [ ] Historical trend analysis
+- [ ] Team collaboration features
+
+Want to contribute? Check our [good first issues](https://github.com/Mosipro1/mcp-git-auditor/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
 ## Versioning
 
