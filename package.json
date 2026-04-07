@@ -1,6 +1,6 @@
 {
   "name": "mcp-git-auditor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for auditing Git repositories against software engineering standards",
   "main": "dist/server.js",
   "bin": {
@@ -18,7 +18,18 @@
     "lint": "eslint src --ext .ts",
     "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": ["mcp", "git", "audit", "software-engineering", "iso", "ieee", "code-quality", "standards", "compliance", "mcp-server"],
+  "keywords": [
+    "mcp",
+    "git",
+    "audit",
+    "software-engineering",
+    "iso",
+    "ieee",
+    "code-quality",
+    "standards",
+    "compliance",
+    "mcp-server"
+  ],
   "author": "Mosipro1 <https://github.com/Mosipro1>",
   "homepage": "https://github.com/Mosipro1/mcp-git-auditor",
   "repository": {
